@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.parent-div {
+  display: flex;
+}
+
+.child-1 {
+  width: 55%;
+  height: 100vh;
+  padding: 15px;
+}
+
+.child-2 {
+  width: 20px;
+  height: 90vh;
+  border-right: 1px solid lightgrey;
+  margin: 30px 0;
+}
+
+.child-3 {
+  width: 20px;
+  height: 90vh;
+  border-left: 1px solid lightgrey;
+  margin: 30px 0;
+}
+
+.child-4 {
+  width: 45%;
+  height: 100vh;
+  padding: 15px;
+}
+
+.main-content {
+  /* background-color: red; */
+  padding: 10px;
+  height: 100%;
+}
+
+.todo-content {
+  /* background-color: yellow; */
+  height: calc(100% - 40px);
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.todo-content-item {
+  width: 90%;
+  height: 100px;
+  border: 0.3px solid lightgray;
+  margin: 10px;
+  position: relative;
+  border-radius: 5px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.todo-content-item:hover {
+  background-color: #f5f5f5;
+}
+.todo-content-item:hover .actions-window {
+  right: 0px;
+}
+
+.todo-id {
+  position: absolute;
+  font-family: monospace;
+  top: 5px;
+  left: 20px;
+  color: lightgrey;
+}
+
+.todo-text {
+  position: absolute;
+  top: 35px;
+  left: 20px;
+  right: 20px;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: bold;
+}
+
+.todo-date {
+  position: absolute;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 10px;
+  bottom: 5px;
+  right: 20px;
+  color: grey;
+}
+
+.empty-todo {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-status {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.2em 0.8em 0 0;
+  margin: 0;
+  width: 100%;
+  text-align: end;
+  font-size: 12px;
+}
+
+.complete {
+  color: rgb(0, 255, 0);
+}
+
+.incomplete {
+  color: rgb(255, 85, 84);
+}
+
+.actions-window {
+  position: absolute;
+  top: 0;
+  right: -50px;
+  bottom: 0;
+  width: 50px;
+  border-left: 0.3px solid lightgray;
+  box-shadow: -5px 0px 100px rgba(0, 0, 255, 0.05);
+  background-color: white;
+  border-radius: 0px 5px 5px 0px;
+  transition: all 0.3s ease;
+}
+
+.full-title {
+  font-size: 30px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 200;
+  margin-left: 7%;
+  background-color: white;
+}
+
+.todo-title {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
+  color: #012443;
+}
+.todoDisplay span {
+  display: block;
+  background-color: rgba(59, 79, 109, 0.8);
+  border-radius: 10px;
+  padding: 1em 0 0 0;
+  margin: 1.5em 0;
+  color: white;
+  transform: scale(1.04);
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgb(152, 152, 152);
+}
+.todoDisplay span:hover {
+  transform: scale(1.01);
+}
+.todoDisplay span #todoMessage,
+.todoDisplay span #todoTimestamp {
+  cursor: pointer;
+  padding: 0 1em;
+  margin: 0 0 0.3em 0;
+  overflow-wrap: break-word;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+}
+.todoDisplay span #todoTimestamp {
+  text-align: right;
+  font-size: 12px;
+  margin: 0;
+  color: lightgrey;
+  font-family: "Courier New", Courier, monospace;
+}
+.todoDisplay span .edit-todo-icons {
+  position: relative;
+  padding: 0.5em 0;
+  background-color: #5cc2c2;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  transition: all 0.25s ease-in-out;
+  border-radius: 0 0 10px 10px;
+}
+.todoDisplay span .edit-todo-icons i {
+  cursor: pointer;
+  font-size: 18px;
+  color: midnightblue;
+  background-color: azure;
+  border-radius: 5px;
+  padding: 0.3em 1.5em;
+}
+.todoDisplay span .edit-todo-icons .fa-edit:hover {
+  background-color: rgb(61, 181, 255);
+  color: white;
+}
+.todoDisplay span .edit-todo-icons .fa-trash-alt:hover {
+  background-color: rgb(255, 0, 0);
+  color: white;
+}
+.todoDisplay span .edit-todo-icons .fa-check:hover {
+  background-color: rgb(0, 178, 119);
+  color: white;
+}
