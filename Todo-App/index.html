@@ -5,9 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="todo application" content="manage your schedule with this simple todo application">
+    <link rel="stylesheet" href="./styles/style.css">
     <title>Todo</title>
 </head>
 <body>
-    
+    <header class="largescreen">
+        <div class="logo">
+          <p>Todo App</p>
+        </div>
+        <div class="empty"></div>
+        <div class="nav">
+          <button id="toggler" onclick="resetgame()">Reset Todos</button>
+          <a href="https://bit.ly/3NaaKdP" target="_blank"
+            ><img src="./assets/twitter.png" alt="twitter icon"
+          /></a>
+          <a href="https://bit.ly/3WMNmX6" target="_blank"
+            ><img src="./assets/linkedin.png" alt="linkedin icon"
+          /></a>
+        </div>
+    </header>
+    <div class="task_content">
+        <div class="topactions">
+            <input type="text" id="taskInput" placeholder="Enter a task">
+            <button id="addButton">Add Task</button>
+        </div>
+        <div class="task_display">
+            <ul id="taskList"></ul>
+        </div>
+    </div>
+
+
+    <!-- Scripts -->
+    <script src="./scripts/main.js"></script>
 </body>
 </html>
