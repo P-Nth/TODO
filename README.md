@@ -1,6 +1,6 @@
 # Todo App
 
-![Todo App Screenshot](./images/preview.png)
+![Todo App Screenshot](./assets/preview.png)
 
 A simple and intuitive Todo app built using HTML, CSS, and JavaScript.
 
