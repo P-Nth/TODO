@@ -1,6 +1,6 @@
 # Todo App
 
-![Todo App Screenshot](./images/todo_app_screenshot.png)
+![Todo App Screenshot](./images/preview.png)
 
 A simple and intuitive Todo app built using HTML, CSS, and JavaScript.
 
@@ -21,7 +21,7 @@ git clone https://github.com/P-Nth/TODO.git
 
 ## Preview
 
-![Todo App Preview](./assets/todo-preview.png)
+![Todo App Preview](./assets/todo-preview.gif)
 
 ## Contributing
 
@@ -33,6 +33,6 @@ This project is licensed under the [Apache License](LICENSE).
 
 ## Feedback
 
-If you have any feedback or questions, feel free to reach out on Twitter [@your-twitter-handle](https://twitter.com/_the_nth).
+If you have any feedback or questions, feel free to reach out on Twitter [@my-twitter-handle](https://twitter.com/_the_nth).
 
 Enjoy your organized and productive day with the Todo App! 🚀✨
