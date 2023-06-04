@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Chokokutai&display=swap');
+
 *::before,
 *::after,
 body {
@@ -5,133 +7,115 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
-.largescreen {
-  display: none;
-  visibility: hidden;
-  opacity: 0;
-}
-header {
-  padding: 0.4em 0;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1.5em;
-  box-shadow: 0 2px 10px rgba(172, 172, 172, 0.885);
-}
-header .logo {
-    display: grid;
-    align-content: center;
-}
-    
-p {
-    font-size: 20px;
-    font-weight: bold;
-    font-family: "Courier New", Courier, monospace;
-    letter-spacing: 4px;
-    padding: 0.3em 1em;
-    margin: 0;
-    cursor: pointer;
+
+/* Header styling */
+header.largescreen {
+  display: flex;
+  padding: 0 1rem;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-header .nav {
+header.largescreen .logo {
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: 'Chokokutai', cursive;
+}
+
+header.largescreen .nav {
   display: flex;
   align-items: center;
 }
-header .nav button {
-  outline: none;
-  border: 2px solid rgb(27, 145, 255);
-  background-color: rgb(27, 145, 255);
-  color: transparent;
-  padding: 0.8em;
-  margin-right: 1em;
-  font-size: 20px;
-  width: 8em;
-  color: rgb(255, 255, 255);
-  border-radius: 5px;
-  transform: scale(1.02);
-  transition: 0.25s ease-in-out;
+
+header.largescreen .nav button {
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  color: #000000;
+  border-radius: 4px;    
+  margin-right: 10px;
+  padding: 0.6rem 0.4rem;
+  background-color: white;
+  border: 1px solid #1b91ff;
+  transition: box-shadow 0.25s ease;
+  box-shadow: 3px -3px 0px 0px #1b91ff;
 }
-header .nav button:hover {
-  transform: scale(1);
+
+header.largescreen .nav button:hover {
+  border: none;
+  color: #ffffff;
+  box-shadow: none;
+  background-color: #ff6347;
 }
-header .nav .links {
-  position: absolute;
-  right: 0;
-  top: 6em;
+
+header.largescreen .nav img {
+  width: 24px;
+  height: 24px;
+  padding: 6px;
+  cursor: pointer;
+  margin-left: 10px;
+  border-radius: 4px;
+  border: 1px solid black;
+  transition: box-shadow 0.25s ease;
+  box-shadow: 3px -3px 0px 0px #000000;
+}
+
+header.largescreen .nav img:hover {
+  box-shadow: none;
+}
+
+/* Footer styling */
+footer {
+  background-color: #f8f8f8;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  margin-bottom: 10px;
+}
+
+.footer-content p {
+  font-size: 14px;
+  color: #777;
+}
+
+.footer-icons {
   display: flex;
-  grid-gap: 2em;
-}
-header .nav img {
-  width: 1.6em;
-  border-radius: 2px;
-  padding: 1em;
-  transition: 0.25s ease-in-out;
-}
-header .nav img:hover {
-  background-color: rgba(218, 218, 218, 0.578);
+  justify-content: center;
 }
 
-.task_content {
-    
+.footer-icons a {
+  margin: 0 5px;
+  display: grid;
+  padding: 3px 5px;
+  border-radius: .5rem;
+  align-content: center;
+  border: 1px solid #000000;
+  transition: box-shadow 0.25s ease;
+  box-shadow: 3px -3px 0px 0px #000000;
 }
 
-input[type="text"] {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-  }
-  
-  button {
-    width: 100%;
-    padding: 8px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-}
-  
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-  
-li {
-    margin-bottom: 5px;
-}
-  
-.completed {
-    text-decoration: line-through;
+.footer-icons img {
+  width: 24px;
+  height: 24px;
 }
 
-@media all and (min-width: 600px) {
-    header .nav .links {
-      top: 5em;
-    }
+.footer-icons a:hover {
+  box-shadow: none;
 }
+
+
 @media all and (min-width: 800px) {
-    .smallscreen {
-      display: none;
-      visibility: hidden;
-      opacity: 0;
-    }
-    .largescreen {
-      display: grid;
-      visibility: visible;
-      opacity: 1;
-    }
-    header .logo p {
-      font-size: 30px;
-    }
-    header .nav {
-      display: flex;
-      grid-gap: 3em;
-      align-items: center;
-    }
-    header .nav button {
-      width: 10em;
-    }
-    header .nav img {
-      width: 2em;
-    }
+  header.largescreen {
+    padding: 0 2rem;
+  }
+  header.largescreen .logo {
+    font-size: 20px;
+  }
+  header.largescreen .nav button {
+    padding: 0.7rem 0.4rem;
+  }
 }
-  

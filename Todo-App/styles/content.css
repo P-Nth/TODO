@@ -1,0 +1,190 @@
+
+.task_content {
+    margin: 0 auto;
+    padding: 1.5rem 1rem 3rem 1rem;
+}
+
+.task_content .task_display {
+    padding: 1rem 0 3rem 0;
+}
+
+.current, .extra {
+    display: flex;
+    flex-direction: column;
+}
+.task_content .task_display ul {
+    padding: 0;
+    margin: 0;
+}
+
+/* Style for the input and button */
+.top_actions {
+    display: flex;
+    align-items: center;
+}
+
+.top_actions input[type="text"] {
+    flex: 1;
+    outline: none;
+    padding: 1rem;
+    border: 1px solid #808080;
+    border-radius: 5px 0 0 5px;
+    background-color: transparent;
+    box-shadow: 3px -3px 0px 0px #000000;
+}
+
+.top_actions button {
+    border: none;
+    padding: 1.05rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: #f0f8ff;
+    border-radius: 0 5px 5px 0;
+    background-color: #808080;
+    transition: box-shadow 0.25s ease;
+    box-shadow: 3px -3px 0px 0px #000000;
+}
+
+.top_actions input[type="text"]::placeholder {
+    color: #999;
+}
+  
+/* Style for the task list items */
+.task_display li {
+    padding: 8px;
+    display: flex;
+    position: relative;
+    margin-bottom: 8px;
+    align-items: center;
+    border-radius: 5px;
+    border: 2px solid #1b91ff;
+    justify-content: space-between;
+    box-shadow: 3px -3px 0px 0px #1b91ff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.task_display li.completed {
+    border-color: #007c5b;
+}
+
+.task_display li .actions {
+    display: flex;
+    gap: 5px;
+}
+
+.task_display button {
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    background: none;
+}
+
+.task_display button .edit {
+    color: #008bb9;
+}
+
+.task_display button .delete {
+    color: #ff6347;
+}
+
+.task_display button .complete {
+    color: #009563;
+}
+
+.task_display button .restore {
+    color: #00abc5;
+}
+
+/* Style for different task sections */
+.task_display h2 {
+    font-size: 18px;
+    margin-bottom: 1rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Style for completed tasks */
+.task_display ul#completedTaskList li {
+    border: 1px solid #009563;
+    text-decoration: line-through;
+    box-shadow: 3px -3px 0px 0px #009563;
+}
+
+/* Style for edited tasks */
+.task_display ul#editedTaskList li {
+    border: 1px solid #008bb9;
+    box-shadow: 3px -3px 0px 0px #008bb9;
+}
+
+/* Style for deleted tasks */
+.task_display ul#deletedTaskList li {
+    border: 1px solid #ff6347;
+    text-decoration: line-through;
+    box-shadow: 3px -3px 0px 0px #ff6347;
+}
+
+/* Style for icon padding */
+.task_display button i {
+    border-radius: 5px;
+    padding: .3rem .5rem;
+}
+
+.completed,
+.edited,
+.deleted {
+    margin-bottom: 20px;
+}
+
+.placeholder {
+    color: gray;
+    display: grid;
+    padding: 1rem 0;
+    text-align: center;
+    justify-content: center;
+}
+.placeholder p {
+    padding: 1rem 0;
+    font-size: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.top_actions button:hover {
+    box-shadow: 3px -3px 0px 0px #1b91ff;
+}
+
+.task_display ul li:hover,
+.task_display ul#completedTaskList li:hover,
+.task_display ul#editedTaskList li:hover, 
+.task_display ul#deletedTaskList li:hover {
+    box-shadow: none;
+}
+
+@media all and (min-width: 539px) {
+    .task_content {
+        max-width: 80%;
+    }
+    
+    .task_content .task_display {
+        display: flex;
+        justify-content: space-between;
+    }
+    .task_display .extra .extra_content {
+        min-width: 22rem;
+        margin-left: auto;
+    }
+    .current, .extra {
+        flex-basis: 45%;
+        width: 45%;
+    }
+}
+
+@media screen and (min-width: 800px){
+    .current > *,
+    .extra > * {
+        width: 80%;
+    }
+    .task_content {
+        max-width: 70%;
+        margin: 0 auto;
+    }
+}
