@@ -1,7 +1,7 @@
 
 .task_content {
     margin: 0 auto;
-    padding: 1.5rem 1rem 3rem 1rem;
+    padding: 3rem 1rem;
 }
 
 .task_content .task_display {
@@ -184,7 +184,7 @@
         width: 80%;
     }
     .task_content {
-        max-width: 70%;
+        max-width: 84%;
         margin: 0 auto;
     }
 }

@@ -290,7 +290,7 @@ function renderTasks() {
         const li = createTaskListItem(completedTasks[i], 'completed');
         completedTaskList.appendChild(li);
       }
-      if (completedTasks.length > 4) {
+      if (completedTasks.length > 2) {
         const showMoreBtn = document.createElement('button');
         showMoreBtn.textContent = 'Show More';
         showMoreBtn.addEventListener('click', () => {
