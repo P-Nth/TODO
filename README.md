@@ -19,6 +19,9 @@ git clone https://github.com/P-Nth/TODO.git
 
 3. Start managing your tasks!
 
+4. OR
+
+5. Use it on the web: https://p-nth.github.io/TODO/
 ## Preview
 
 ![Todo App Preview](./assets/todo-preview.gif)
