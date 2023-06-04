@@ -88,9 +88,10 @@ function addTask() {
 
 // Function to edit a task
 function editTask(taskId) {
-  const taskIndex = tasks.findIndex(task => task.id === taskId);
+  const taskItem = taskList.querySelector(`[data-id="${taskId}"]`);
 
-  if (taskIndex !== -1) {
+  if (taskItem) {
+    const taskIndex = tasks.findIndex(task => task.id === taskId);
     const editedTask = tasks[taskIndex];
 
     // Check if the task has already been edited
@@ -103,6 +104,10 @@ function editTask(taskId) {
 
     // Get the previous text from the edited task in the editedTasks array
     const previousText = editedTask.previousText || editedTask.text;
+
+    // Create the div for edit input
+    const editInputContainer = document.createElement('div');
+    editInputContainer.classList.add('edit-input');
 
     // Create an input field for editing the task
     const editInput = document.createElement('input');
@@ -141,10 +146,10 @@ function editTask(taskId) {
     });
 
     // Replace the task item with the input field and save button
-    const taskItem = taskList.childNodes[taskIndex];
     taskItem.innerHTML = '';
-    taskItem.appendChild(editInput);
-    taskItem.appendChild(saveButton);
+    taskItem.appendChild(editInputContainer);
+    editInputContainer.appendChild(editInput);
+    editInputContainer.appendChild(saveButton);
 
     // Add the task to the editedTasks array
     if (existingEditedTaskIndex === -1) {
@@ -381,6 +386,7 @@ function renderTasks() {
 // Function to create a task list item
 function createTaskListItem(task, category) {
   const li = document.createElement('li');
+  li.dataset.id = task.id; // Add data-id attribute with the task ID
 
   const taskContainer = document.createElement('div');
   taskContainer.classList.add('task-container');
@@ -425,7 +431,7 @@ function createTaskListItem(task, category) {
   const completeButton = createIconButton('fas fa-check complete', 'complete-button', () => completeTask(task.id, category));
 
   if (category === 'current') {
-    const editButton = createIconButton('fas fa-edit edit', 'edit-button', () => editTask(task.id));
+    const editButton = createIconButton('fas fa-edit edit', 'edit-button', () => editTask(task.id)); // Updated event listener
 
     taskContainer.appendChild(textElement);
     iconsContainer.appendChild(editButton);
@@ -475,7 +481,6 @@ function createTaskListItem(task, category) {
 
   return li;
 }
-
 
 // Function to create an icon button
 function createIconButton(iconClass, buttonClass, clickHandler) {

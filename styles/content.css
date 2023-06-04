@@ -73,6 +73,23 @@
     padding: .8rem 0 0 0;
 }
 
+.task_display li .edit-input {
+    display: flex;
+    justify-content: space-between;
+}
+
+.task_display li .edit-input input {
+    width: 100%;
+    outline: none;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #087eff;
+}
+
+.task_display li .edit-input button {
+    padding: .5rem;
+}
+
 .task_display li.completed {
     border-color: #007c5b;
 }
