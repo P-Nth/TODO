@@ -15,7 +15,7 @@ let allTasks = []; newTasks = []; completedTasks = []; editedTasks = []; deleted
 const placeholderHTML = `
     <div class="placeholder">
       <div>
-          <img src="../assets/empty.png" alt="No Tasks" width=32 height=32>
+          <img src="../assets/empty.png" alt="No Tasks" width=32 height=32 />
       </div>
       <p>Nothing here yet!</p>
     </div>`
